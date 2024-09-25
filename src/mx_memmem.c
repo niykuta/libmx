@@ -13,7 +13,7 @@ void *mx_memmem(const void *big, size_t big_len, const void *little, size_t litt
     }
 
     for (size_t i = 0; i <= big_len - little_len; i++) {
-        if (cb[i] == cl[0] && memcmp(&cb[i], cl, little_len) == 0) {
+        if (cb[i] == cl[0] && mx_memcmp(&cb[i], cl, little_len) == 0) {
             return (void *)(cb + i);
         }
     }
