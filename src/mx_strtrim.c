@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 char *mx_strtrim(const char *str) {
     if (str == NULL) {
@@ -27,7 +27,6 @@ char *mx_strtrim(const char *str) {
     }
 
     mx_strncpy(arr, &str[start], end - start + 1);
-
     return arr;
 }
 

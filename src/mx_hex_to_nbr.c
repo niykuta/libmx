@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 unsigned long mx_hex_to_nbr(const char *hex) {
     if (!hex) {
@@ -6,6 +6,7 @@ unsigned long mx_hex_to_nbr(const char *hex) {
     }
 
     unsigned long res = 0;
+    
     while (*hex) {
         res *= 16;
 

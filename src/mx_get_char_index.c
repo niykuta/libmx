@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 int mx_get_char_index(const char *str, char c) {
     if (str == NULL) {
@@ -8,7 +8,7 @@ int mx_get_char_index(const char *str, char c) {
     int len = mx_strlen(str);
 
     for (int i = 0; i < len; i++) {
-        if(str[i] == c) {
+        if (str[i] == c) {
             return i;
         }
     }

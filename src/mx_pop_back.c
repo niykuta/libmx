@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 void mx_pop_back(t_list **head) {
     if (head == NULL) {

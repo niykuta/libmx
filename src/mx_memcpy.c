@@ -1,10 +1,6 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n) {
-    if (!dst || !src || n == 0) {
-        return NULL;
-    }
-
     unsigned char *d = (unsigned char *)dst;
     const unsigned char *s = (const unsigned char *)src;
 

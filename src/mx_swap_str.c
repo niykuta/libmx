@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 void mx_swap_str(char **str1, char **str2) {
     char *temp = *str1;

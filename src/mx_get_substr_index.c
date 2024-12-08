@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 int mx_get_substr_index(const char *str, const char *sub) {
     if (str == NULL || sub == NULL) {
@@ -17,8 +17,8 @@ int mx_get_substr_index(const char *str, const char *sub) {
     }
 
     for (int i = 0; i <= str_len - sub_len; i++) {
-        if(str[i] == sub[0]) {
-            if(mx_strncmp(&str[i], sub, sub_len) == 0){
+        if (str[i] == sub[0]) {
+            if (mx_strncmp(&str[i], sub, sub_len) == 0){
                 return i;
             }
         }

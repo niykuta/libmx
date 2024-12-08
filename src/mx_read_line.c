@@ -10,8 +10,9 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
     ssize_t bytes_read;
     size_t  bytes_amount = 0;
     
-    while ((bytes_read = read(fd, buf, buf_size)) > 0) {
+    while ((bytes_read = read(fd, buf, 1)) > 0) {
         ssize_t i = 0;
+
         while (i < bytes_read) {
             if (buf[i] == delim) {
                 *lineptr = result;
@@ -20,9 +21,11 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
 
             char current_char[2] = {buf[i], '\0'};
             char *new_result = mx_strjoin(result, current_char);
+
             if (result != NULL) {
                 free(result);
             }
+            
             result = new_result;
             ++bytes_amount;
             i++;

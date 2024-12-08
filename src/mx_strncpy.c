@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 char *mx_strncpy(char *dst, const char *src, int len) {
     if (dst == NULL || src == NULL || len < 0) {

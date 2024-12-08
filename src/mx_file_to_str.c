@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 char *mx_file_to_str(const char *file) {
     if (!file) {
@@ -10,7 +10,7 @@ char *mx_file_to_str(const char *file) {
     if (fd < 0) {
         return NULL;
     }
-    
+
     int lenght = 0;
     char element;
 
@@ -34,10 +34,10 @@ char *mx_file_to_str(const char *file) {
         str[i] = element;
     }
 
-    if (close(fd) < 0) {
+    if (close(fd1) < 0) {
         return NULL;
     }
-
+    
     return str;
 }
 

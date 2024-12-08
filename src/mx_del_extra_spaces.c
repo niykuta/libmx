@@ -1,4 +1,4 @@
-#include <../inc/libmx.h> 
+#include "../inc/libmx.h"
 
 char *mx_del_extra_spaces(const char *str) {
     if (str == NULL) {
@@ -26,6 +26,4 @@ char *mx_del_extra_spaces(const char *str) {
     new[j] = '\0';
     return mx_strtrim(new);
 }
-
-
 
